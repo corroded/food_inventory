@@ -2,10 +2,14 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
 
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'pg'
+gem 'haml'
+gem 'compass'
+gem 'authlogic'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -29,3 +33,18 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+group :test do
+  gem 'rspec-rails', '>= 2.0.0.beta.10'
+end
+
+group :development do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'gherkin', '2.1.5'
+  gem 'cucumber-rails', '>=0.3.2'
+  gem 'cucumber', '>=0.8.5'
+  gem 'rspec-rails', '>= 2.0.0.beta.10'
+  gem 'spork'
+  gem 'launchy'    # So you can do Then show me the page
+end  
