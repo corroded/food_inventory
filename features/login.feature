@@ -1,4 +1,4 @@
-Feature: Admin login
+Feature: User Login
 
   As an Administrator
   I want to create users
